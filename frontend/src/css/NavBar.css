@@ -1,0 +1,9 @@
+#logo{
+    display: inline-block;
+    color: var(--lightblue);
+    font-size: 30px;
+}
+
+#logo i{
+  margin-right: 15px;
+}

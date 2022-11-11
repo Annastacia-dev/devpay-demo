@@ -1,0 +1,31 @@
+.invoice-btn.btn{
+    padding: 5px 20px;
+    border: 2px solid #0077b5;
+    border-radius: 30px;
+    background: none;
+    margin-left: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--lightblue);
+    font-weight: 600;
+}
+
+.invoice-btn.btn i{
+    margin-right: 5px;
+   
+}
+
+.invoice-btn.btn:hover{
+    background: var(--lightblue);
+    color: #fff;
+}
+
+label{
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--darkblue);
+}
+
+.delete:hover{
+    color: red;
+}

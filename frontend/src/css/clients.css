@@ -1,0 +1,34 @@
+.clients-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    margin-top: 20px;
+    margin-left: -80px;
+    width: 80%;
+    padding:10px 100px;
+    border-radius: 5px;
+    color: var(--darkblue);
+}
+
+.clients-container table{
+    width: 200%;
+    border-collapse: collapse;
+}
+
+.clients-container table tr{
+    border-bottom: 1px solid #fff;
+}
+
+.clients-container table tr{
+    border-bottom: 1px solid var(--darkblue);
+}
+
+.clients-container table tr th{
+    padding: 10px 0;
+    text-align: left;
+    font-weight: 500;
+}
+
+.clients-container table tr td{
+    padding: 10px 0;
+}

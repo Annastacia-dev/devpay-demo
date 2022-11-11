@@ -1,2 +1,0 @@
-# devpay-trial
-# devpay-demo
