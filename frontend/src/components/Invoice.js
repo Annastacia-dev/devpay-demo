@@ -37,13 +37,6 @@ function Invoice( { dev }) {
         })
             .then(response => response.json())
             .then(data => setNewClient(data.id))
-            // clear form
-            setClient({
-                name: '',
-                location: '',
-                email: '',
-                phone_number: 0
-            })
     }
 
     const handleClientChange = (e) => {
@@ -264,7 +257,6 @@ const handleSubmit = (e) => {
                                             onChange={e => setDueDate(e.target.value)}
                                         />
                                     </div>
-
                                 </article>
 
                                 <article>
@@ -295,7 +287,6 @@ const handleSubmit = (e) => {
                                     onChange={handleServiceChange}>
 
                                 </textarea>
-
                                 <button onClick={() => setShowInvoice(true)}
                                     className="bg-blue-500 text-white  font-bold py-2 px-8 roundend shadow border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300"
                                     >Preview</button>

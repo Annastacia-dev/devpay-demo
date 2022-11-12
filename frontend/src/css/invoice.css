@@ -29,3 +29,13 @@ label{
 .delete:hover{
     color: red;
 }
+
+.add{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--darkblue);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    width: 60%;
+}

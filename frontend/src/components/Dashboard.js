@@ -11,8 +11,6 @@ const Dashboard = ( { dev }) => {
         return new Date(b.date) - new Date(a.date)
     }).slice(0,3)
 
-   
-
 
 
   return (
