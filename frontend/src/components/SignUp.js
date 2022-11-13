@@ -1,5 +1,7 @@
 import React,{ useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import NavBar from './NavBar'
+import Footer from './Footer'
 
 const SignUp = () => {
 
@@ -63,6 +65,7 @@ const SignUp = () => {
   return (
     <div>
     {/* SignIn form */}
+    <NavBar />
     <form className="sign-in-form" style={{marginTop: "50px"}}>
         <h1>Sign Up</h1>
         <div className="input-field">
@@ -80,6 +83,8 @@ const SignUp = () => {
             </div>
             </div>
             </form>
+
+    <Footer />
             
 </div>
   )

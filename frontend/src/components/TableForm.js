@@ -2,7 +2,8 @@ import React from 'react'
 
 function TableForm({
     name,
-    handleServiceChange,
+    setServiceName,
+    setRatePerHour,
      rate,
      amount,
      setAmount,
@@ -27,7 +28,7 @@ function TableForm({
                 id="name"
                 placeholder="Web development"
                 value={name}
-                onChange={handleServiceChange}
+                onChange={e => setServiceName(e.target.value)}
             />
         </div>
 
@@ -53,7 +54,7 @@ function TableForm({
               id="rate_per_hour"
               placeholder="500"
               value={rate}
-              onChange={handleServiceChange}
+              onChange={e =>setRatePerHour(e.target.value)}
             />
           </div>
 

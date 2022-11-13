@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Table({name, description,rate,amount, newService, newClient}) {
+function Table({name, description,rate,amount}) {
   return (
     <>
     <table width="100%" className="mb-10">

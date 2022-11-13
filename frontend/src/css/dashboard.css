@@ -101,6 +101,7 @@
 .invoices table{
     width: 200%;
     border-collapse: collapse;
+    font-size: 14px;
 }
 
 .invoices table tr{

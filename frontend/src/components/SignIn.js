@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useNavigate,Link } from 'react-router-dom'
 import '../css/signup.css'
+import NavBar from './NavBar'
+import Footer from './Footer'
 
 const SignIn = ({ changeUser }) => {
 
@@ -33,6 +35,7 @@ const SignIn = ({ changeUser }) => {
   return (
     <div>
         {/* SignIn form */}
+        <NavBar />
         <form className="sign-in-form">
             <h1>Sign In</h1>
             <div className="input-field">
@@ -47,6 +50,8 @@ const SignIn = ({ changeUser }) => {
                 </div>
                 </div>
                 </form>
+
+        <Footer />
                 
     </div>
   )

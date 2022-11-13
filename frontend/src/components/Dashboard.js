@@ -80,7 +80,7 @@ const Dashboard = ( { dev }) => {
               const status = invoice.paid ? <span style={{backgroundColor: "green",borderRadius:"3px" ,padding:"5px"}}>Paid</span> : <span style={{backgroundColor: "red",borderRadius:"3px" ,padding:"5px"}}>Pending</span>
                       return (
                         <tr key={invoice.id}>
-                          <td style={{paddingLeft: "40px"}}>{invoice.number}</td>
+                          <td >{invoice.number}</td>
                             <td>{clientName}</td>
                           <td>${amount}</td>
                           <td>{status}</td>

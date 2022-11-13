@@ -11,8 +11,9 @@
 }
 
 .clients-container table{
-    width: 200%;
+    width: 175%;
     border-collapse: collapse;
+    font-size: 14px;
 }
 
 .clients-container table tr{

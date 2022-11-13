@@ -10,6 +10,7 @@ import Services from './Services';
 import Clients from './Clients';
 import Profile from './Profile';
 import Home from './Home';
+import Error from './Error';
 
 function App () {
 
@@ -57,6 +58,10 @@ function App () {
           }
           )
         }
+
+        <Route path='*' element={<Error/>}    />
+
+
       </Routes>  
     </div>
   )

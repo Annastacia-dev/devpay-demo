@@ -86,7 +86,7 @@ translate Y: move along the Y axis, negative(-20) moves it up, while positive(20
 }
 
 footer{
-    background: black;
+    background: var(--darkblue);
     padding: 20px;
     width: 100%;
 }
