@@ -62,12 +62,10 @@ function Invoice( { dev }) {
     const [serviceName, setServiceName] = useState('')
     const [description, setDescription] = useState('')
     const [ratePerHour, setRatePerHour] = useState(0)
-    const [developerId, setDeveloperId] = useState(dev.id)
-    const [clientId, setClientId] = useState(newClient)
+   
 
     const handleServiceSubmission = (e) => {
         e.preventDefault()
-        handleClientSubmission(e)
         console.log("NEW CLIENT:", newClient)
         fetch('http://localhost:9292/services', {
             method: 'POST',
@@ -78,7 +76,7 @@ function Invoice( { dev }) {
                 name: serviceName,
                 description: description,
                 rate_per_hour: ratePerHour,
-                developer_id: developerId,
+                developer_id: dev.id,
                 client_id: newClient
             })
         })
@@ -110,7 +108,6 @@ function Invoice( { dev }) {
 
     const handleInvoiceSubmission = (e) => {
         e.preventDefault()
-        handleServiceSubmission(e)
         fetch('http://localhost:9292/invoices', {
             method: 'POST',
             headers: {
@@ -139,7 +136,7 @@ function Invoice( { dev }) {
 const handleSubmit = (e) => {
     e.preventDefault()
     handleInvoiceSubmission(e)
-    // navigate(`/${dev.id}/dashboard`)
+    navigate(`/${dev.id}/dashboard`)
 }
 
 
