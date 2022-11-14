@@ -5,6 +5,9 @@ import '../css/dashboard.css'
 
 const Dashboard = ( { dev }) => {
 
+  // sort invoices by time created, return most recent first
+
+
 //  sort invoices by date, return first 3 invoices
 
     const invoices = dev.invoices.sort((a,b) => {
@@ -16,7 +19,7 @@ const Dashboard = ( { dev }) => {
   return (
     <>
     <div className='dashboard'>
-    <DashboardNav />
+    <DashboardNav/>
 
     <div className='developer-dashboard'>
 

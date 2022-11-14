@@ -12,11 +12,13 @@ import Profile from './Profile';
 import Home from './Home';
 import Error from './Error';
 
+
+
 function App () {
 
 
   const [currentUser, setCurrentUser] = useState(null)
-
+ 
   const changeUser = (user) => {
     setCurrentUser(user)
   }
@@ -31,6 +33,7 @@ function App () {
       .then(data => setDevelopers(data))
   }, [])
 
+
   return (
     
     <div>
@@ -44,6 +47,8 @@ function App () {
         <Route path="/signup" element={<SignUp />} />      
         {
           developers.map(dev => {
+
+
             return (
               < >
               
@@ -53,11 +58,13 @@ function App () {
             <Route key={dev.id} path={`/${dev.id}/services`} element={<Services dev={dev} />} />
             <Route key={dev.id} path={`/${dev.id}/clients`} element={<Clients dev={dev} />} />
             <Route key={dev.id} path={`/${dev.id}/profile`} element={<Profile dev={dev} />} />
-            </>
+            
+        </>
             )
           }
           )
         }
+
 
         <Route path='*' element={<Error/>}    />
 

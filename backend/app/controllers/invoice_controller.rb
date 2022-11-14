@@ -30,7 +30,7 @@ class InvoiceController < Sinatra::Base
             number: params[:number],
             amount: params[:amount],
             date: params[:date],
-            date_due: params[:date_due],
+            due_date: params[:due_date],
             paid: params[:paid],
             service_id: params[:service_id],
         )

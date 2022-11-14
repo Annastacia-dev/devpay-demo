@@ -1,8 +1,11 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React,{ useState} from 'react'
+import { Link} from "react-router-dom";
 import DashBoardNav from './DashboardNav'
+import InvoiceEdit from './InvoiceEdit';
 
-const Invoices = ( { dev } ) => {
+const Invoices = ( { dev} ) => {
+
+    const [edit, setEdit] = useState(false)
 
     // Sort invoices by date
 
@@ -54,48 +57,63 @@ const Invoices = ( { dev } ) => {
                 </thead>
                 <tbody>
                     {invoices.map(invoice => {
-
                 const client = dev.services.find(service => service.id === invoice.service_id).client_id
                 const clientName = dev.clients.find(customer => customer.id === client).name
 
 
                         const status = invoice.paid ? <span style={{color: "green"}}>Paid</span> : <span style={{color: "red"}}>Pending</span>
                         const amount = invoice.amount.toString().split('').reverse().join('').match(/.{1,3}/g).join(',').split('').reverse().join('')
-
+                        // Date only
+                        const date = invoice.date.split('T')[0]
+                        // Due date only
+                        const dueDate = invoice.due_date.split('T')[0]
 
                         return (
-                            <tr>
+                            <>
+                            <tr key={invoice.id}>
                                 <td>{invoice.number}</td>
                                 <td>{clientName}</td>
                                 <td>${amount}</td>
                                 <td>{status}</td>
                                 <td>
-                                    {invoice.date.split('T')[0]}
+                                    {date}
                                 </td>
-                                <td>{invoice.due_date.split('T')[0]}</td>
+                                <td>{dueDate}</td>
                                 <td>
-                                    <button>
-                                    <i class="fa-solid fa-pen"></i>
-                                    </button>
+                                <button onClick={() => setEdit(!edit)}>{edit ? <i class="fa-regular fa-circle-xmark"></i> : <i className="fa-solid fa-pen"></i>}</button>  
                                 </td>
                                 <td>
+                                    
                                     <button 
                                     style={{marginLeft: "50px"}} 
                                     className="delete"
                                     onClick={() => handleDeleteInvoice(invoice.id)}
                                     >
-                                    <i class="fa-solid fa-trash"></i>
+                                    <i className="fa-solid fa-trash"></i>
                                     </button>
                                 </td>
+                                <td>
+                                <InvoiceEdit 
+                            dev={dev} 
+                            invoice={invoice}
+                            edit={edit}
+                            setEdit={setEdit}
+                             /> 
+                                </td>
                             </tr>
+                           
+                            </>
+                            
                         )
-                    })}
+                    })}    
                 </tbody>
+                
             </table>
             </div>
             </div>
         </div>
         </div>
+        
 
     </>
   )

@@ -14,7 +14,7 @@ const Profile = ({ dev }) => {
     const [email, setEmail] = React.useState(dev.email)
     const [phone_number, setPhone_number] = React.useState(dev.phone_number)
     const [location, setLocation] = React.useState(dev.location)
-    const [password, setPassword] = React.useState(dev.password)
+
 
 
 
@@ -33,7 +33,7 @@ const Profile = ({ dev }) => {
                 email: email,
                 phone_number: phone_number,
                 location: location,
-                password: password
+                password: dev.password
             })
         })
             .then(response => response.json())
@@ -58,8 +58,6 @@ const Profile = ({ dev }) => {
                     <input type="text" value={phone_number} onChange={(e) => setPhone_number(e.target.value)} />
                     <label>Location</label>
                     <input type="text" value={location} onChange={(e) => setLocation(e.target.value)} />
-                    <label>Password</label>
-                    <input type="text" value={password} onChange={(e) => setPassword(e.target.value)} />
                     <button>Save</button>
                 </form>
             </div>

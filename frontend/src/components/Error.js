@@ -11,7 +11,7 @@ const Error = () => {
 
         <Link to='/'>
             <button>
-                Go Back
+              Back to Home
             </button>
         </Link>
 

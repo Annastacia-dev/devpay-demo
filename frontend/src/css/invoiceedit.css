@@ -1,0 +1,19 @@
+.invoice-edit-form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.edit-invoice form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.edit-invoice button{
+    margin-top: 5px;
+    background-color: var(--darkblue);
+    padding: 2px;
+    color: #fff;
+}
+
+
