@@ -51,6 +51,7 @@ const SignUp = () => {
             phone_number: ''
         })
         navigate('/signin')
+        window.location.reload()
     }
     }
 
