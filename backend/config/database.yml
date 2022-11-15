@@ -6,6 +6,7 @@ default: &default
 development:
   <<: *default
   database: db/development.sqlite3
+  host: localhost
   
 production:
   <<: *default
